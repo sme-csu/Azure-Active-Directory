@@ -1,10 +1,10 @@
-#Set up sign-in for a specific Azure Active Directory organization in Azure Active Directory B2C
-##Prerequisites
+# Set up sign-in for a specific Azure Active Directory organization in Azure Active Directory B2C
+## Prerequisites
 Create a user flow to enable users to sign up and sign in to your application.
 
 If you haven't already done so, register a web application, and enable ID token implicit grant.
 
-##Register an Azure AD app
+## Register an Azure AD app
 
 To enable sign-in for users with an Azure AD account from a specific Azure AD organization, in Azure Active Directory B2C (Azure AD B2C), you need to create an application in Azure portal. For more information, see Register an application with the Microsoft identity platform.
 
@@ -30,7 +30,7 @@ Select Certificates & secrets, and then select New client secret.
 
 Enter a Description for the secret, select an expiration, and then select Add. Record the Value of the secret for use in a later step.
 
-##Configuring optional claims
+## Configuring optional claims
 If you want to get the family_name and given_name claims from Azure AD, you can configure optional claims for your application in the Azure portal UI or application manifest. For more information, see How to provide optional claims to your Azure AD app.
 
 Sign in to the Azure portal. Search for and select Azure Active Directory.
@@ -49,7 +49,7 @@ Select the optional claims to add, family_name and given_name.
 
 Click Add.
 
-##Configure Azure AD as an identity provider
+## Configure Azure AD as an identity provider
 Make sure you're using the directory that contains Azure AD B2C tenant. Select the Directory + subscription filter in the top menu and choose the directory that contains your Azure AD B2C tenant.
 
 Choose All services in the top-left corner of the Azure portal, and then search for and select Azure AD B2C.
@@ -81,7 +81,7 @@ Surname: family_name
 Email: preferred_username
 Select Save.
 
-##Add Azure AD identity provider to a user flow
+## Add Azure AD identity provider to a user flow
 In your Azure AD B2C tenant, select User flows.
 
 Click the user flow that you want to add the Azure AD identity provider.
